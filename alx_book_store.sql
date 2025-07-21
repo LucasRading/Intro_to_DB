@@ -44,3 +44,30 @@ CREATE TABLE ORDER_DETAILS (
     FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
 );
 
+-- INSERT SAMPLE DATA INTO AUTHORS
+INSERT INTO AUTHORS (author_name) VALUES
+('Chinua Achebe'),
+('Ngũgĩ wa Thiong\'o'),
+('Margaret Atwood');
+
+-- INSERT SAMPLE DATA INTO BOOKS
+INSERT INTO BOOKS (title, author_id, price, publication_date) VALUES
+('Things Fall Apart', 1, 1200.00, '1958-06-17'),
+('Weep Not, Child', 2, 950.50, '1964-03-12'),
+('The Handmaid\'s Tale', 3, 1800.00, '1985-09-01');
+
+-- INSERT SAMPLE DATA INTO CUSTOMERS
+INSERT INTO CUSTOMERS (customer_name, email, address) VALUES
+('Alice Wanjiku', 'alice@example.com', '123 Nairobi Rd, Kenya'),
+('Brian Otieno', 'brian@example.com', '456 Kisumu Ave, Kenya');
+
+-- INSERT SAMPLE DATA INTO ORDERS
+INSERT INTO ORDERS (customer_id, order_date) VALUES
+(1, '2025-07-01'),
+(2, '2025-07-01');
+
+-- INSERT SAMPLE DATA INTO ORDER_DETAILS
+INSERT INTO ORDER_DETAILS (order_id, book_id, quantity) VALUES
+(1, 1, 1),
+(1, 2, 2),
+(2, 3, 1);
